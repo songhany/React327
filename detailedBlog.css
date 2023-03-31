@@ -1,0 +1,132 @@
+/********** Base styles **********/
+:root{
+  --color-primary:#4285F4;
+  --color-primary-dark:#0d47a1;
+  --color-success:#00C851;
+  --color-success-dark:#007E33;
+  --color-grey:#e0e0e0;
+  --color-grey-dark:#757575;
+  --color-footer: #F1F8E9;
+  --color-about: #FAFAFA;
+}
+
+*,
+*::before,
+*::after{
+  margin:0;
+  padding:0;
+  box-sizing: inherit
+}
+
+html{
+  font-size: 62.25%;   /* 10px */
+}
+
+body{
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+svg {
+  width:  20px;
+  height: 20px;
+}
+
+/* common */
+.blog-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.blog-container .blog-header-container {
+  display: flex;
+  flex:1 1 100%;
+  margin: 1rem;
+}
+
+.blog-header-container .blog-header-item .subscribe{
+  margin: 0rem 0rem 0.5rem 10rem;
+}
+
+.blog-header-container .blog-header-item .title{
+  margin: 2rem 50rem 0rem 40rem;
+}
+
+.blog-header-container .blog-header-item .magnifying-glass{
+  margin: 0rem 0rem 0rem 0rem;
+}
+
+.blog-content-container {
+  display: flex;
+  height: calc(100vh - 44px);
+}
+
+h1,
+h2 {
+  padding: 1rem 0rem;
+}
+
+
+/* Main content */
+.blog-main {
+  position: relative;
+  border: 1px solid red;
+  flex-grow: 1;
+  padding: 2rem 10rem 20rem 11rem;  /* adjust main content distance */
+  max-width: 90rem;
+}
+
+.blog-main .date {
+  color: var(--color-grey-dark)
+}
+
+.main-blog-container {
+  margin: 2rem 0rem;
+}
+
+.main-blog-container p {
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+.main-blog-container li {
+  margin: 1rem 0rem 1rem 3rem;
+}
+
+button {
+  border-radius: 10px;
+  margin: 0rem 1rem 0rem 0rem;
+  padding: 1rem 2rem;
+  color: #4285F4;
+  background-color: #FAFAFA;
+}
+
+/* Right side column */
+.blog-nav {
+  border: 1px solid blue;
+  width: 40rem;
+}
+
+.blog-nav .nav-content {
+  padding: 1rem 3rem;
+}
+
+.about {
+  border: 0.1rem solid var(--color-grey);
+  padding: 2rem 10rem 20rem 2rem;
+  background-color: var(--color-about);
+}
+
+.archives {
+  border: 0.1rem solid var(--color-grey);
+  margin: 4rem 0rem;
+  padding: 2rem 10rem 20rem 2rem;
+}
+
+.elsewhere {
+  border: 0.1rem solid var(--color-grey);
+  margin: 4rem 0rem;
+  padding: 2rem 10rem 20rem 2rem;
+}
