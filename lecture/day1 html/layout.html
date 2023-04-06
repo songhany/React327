@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    /* CSS reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .app-header {
+      height: 44px;
+      border: 1px solid gray;
+    }
+    .app-nav {
+      border: 1px solid blue;
+      width: 200px;
+    }
+    .app-main {
+      border: 1px solid red;
+      flex-grow: 1;
+    }
+    .app-content {
+      display: flex;
+      height: calc(100vh - 44px);
+    }
+  </style>
+  <header class="app-header">Header</header>
+  <div class="app-content">
+    <nav class="app-nav">Nav</nav>
+    <main class="app-main">Main</main> 
+    <nav class="app-nav">Nav</nav> 
+  </div>
+</body>
+</html>
