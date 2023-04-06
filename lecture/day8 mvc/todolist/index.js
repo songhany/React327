@@ -15,6 +15,8 @@ class TodoView {
   createTodoElement(todo) {
     const todoElem = document.createElement("div");
     todoElem.classList.add("todo");
+    const todoTitle = document.createElement("div");
+    todoTitle.in
   }
 }
 

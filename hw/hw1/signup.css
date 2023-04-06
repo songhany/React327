@@ -1,0 +1,140 @@
+/********** Base styles **********/
+:root {
+  --color-blue: rgb(88, 155, 210);
+  --color-green: rgb(67, 186, 121)
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;  
+}
+
+html {
+  font-size: 62.50%;    /* 10px */   
+}
+
+body {
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.form-container {
+  position: fixed;
+  width: 100%;
+  max-width: 60rem;
+  top: 20%;
+  left: 35%;
+}
+
+.form-row {
+  width: 99%;
+  margin: 1% 0px 1% 0px;
+}
+
+.form-item {
+  display: inline;
+}
+
+.form-signup{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-signup .form-signup-header {
+  text-align: center;
+  margin: 5px 0;
+}
+
+.form-signup .form-row {
+  flex:1 1 100%;
+  margin: 0.5rem 1rem;
+}
+
+strong {
+  color: rgb(255, 255, 255);
+  background-color: var(--color-blue);
+  border-radius: 3px;
+  padding: 3px 8px;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+button {
+  color: white;
+  width: 40%;
+  border: none;
+  border-radius: 5px;  
+  padding: 0.6rem;
+}
+
+#fname,
+#lname,
+#pwd, 
+#cpwd {
+  width: 49%;
+}
+
+#mnumber,
+#eaddress {
+  width: 99%;
+}
+
+.iagree {
+  display: inline-block;
+  width: 20%;
+}
+
+.prompt {
+  display: inline-block;
+  width: 75%;
+}
+
+.register {
+  color: rgb(255, 255, 255);
+  background-color: var(--color-blue);
+  width: 49%;
+}
+
+.signin {
+  color: rgb(255, 255, 255);
+  background-color: var(--color-green);
+  width: 49%;
+}
+
+
+/********** desktop **********/
+/* @media (min-width: 992px) {
+  .col-lg-3 {
+      float:left;
+      width:29%;
+      min-height: 250px;
+  }  
+} */
+
+/********** tablet **********/
+/* @media (min-width: 768px) and (max-width: 991px) {
+  .col-md-6 {
+      float:left;
+      width:46%;
+  }  
+  .col-md-12 {
+      float:left;
+      width:96%;
+  }
+} */
+
+
+/********** mobile **********/
+/* @media (max-width: 768px) {
+  .col-sm-12 {
+      float:left;
+      width:96%;
+  }  
+} */
