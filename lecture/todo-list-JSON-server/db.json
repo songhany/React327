@@ -9,11 +9,6 @@
       "id": 2,
       "title": "new Todo",
       "completed": false
-    },
-    {
-      "title": "3",
-      "completed": false,
-      "id": 3
     }
   ]
 }
