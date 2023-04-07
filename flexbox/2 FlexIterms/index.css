@@ -1,0 +1,41 @@
+/* 
+
+If you set only the flex-grow and flex-shrink values, flex-basis would default to zero. This is called an absolute flex. For example "flex: auto;“ remember this is same as ”flex: 1 1 auto;“
+Absolute flex-items have their widths based solely on flex,
+
+When you set only the flex-basis, you get a relative flex. For example "flex: 1;" same as ”flex: 1 1 0“. see flex: 'positive number'
+relative flex items have their widths based on content size.
+
+*/
+
+ul {
+  display: flex;
+  border: 1px solid red;
+  padding: 0;
+  list-style: none;
+  background-color: #e8e8e9;
+}
+
+li {
+  flex: 0 1 auto;    /* flex-grow, flex-shrink and flex-basis */
+  /* flex-grow: 0; */
+  /* flex-shrink: 1; */
+  /* flex-basis: auto; */
+  background-color: #8cacea;
+  margin: 8px;
+  min-height: 100px;
+  color: #fff;
+  padding: 4px;
+}
+
+
+/*select first li element within the ul */
+/*give it a value higher than 0. Remember it's ```order:0``` for other flex-items by default*/
+/* li:nth-child(1) {
+  order: 1; 
+
+}
+
+li:nth-child(3) {
+  order: 1
+} */
