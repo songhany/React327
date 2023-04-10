@@ -108,6 +108,7 @@
 // console.log(this===window);
 // function foo(){
 //     console.log("foo",this);
+//     console.log(this === window);
 // }
 // foo()
 
@@ -254,6 +255,6 @@ function storeValue(value){
 }
 
 [1,2,3,4,5].forEach((e)=>storeValue(e))
-console.log(values)
+// console.log(values)
 
 
