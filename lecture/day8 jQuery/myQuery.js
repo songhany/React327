@@ -83,18 +83,11 @@ $$.ajax = (requestObj) => {
 
 $$.ajax({
   url: "https://jsonplaceholder.typicode.com/posts",
-  data: {
-    userId: 1,
-    title: "Songhan Yu",
-    body: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
-  },
-  success: (result) => {
-    console.log(result);
-  },
-});
-
-$$.ajax({
-  url: "https://jsonplaceholder.typicode.com/posts",
+  // data: {
+  //   userId: 1,
+  //   title: "Songhan Yu",
+  //   body: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
+  // },
   success: (result) => {
     console.log(result);
   },
@@ -126,3 +119,8 @@ $$.ajax({
 //   hiddenBox.show();
 //   // console.log("event clicked")
 // });
+
+
+// Homework:
+// 1. Recreate Jquery on your own
+// 2. add three new methods from the API documentation
