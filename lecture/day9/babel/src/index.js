@@ -1,15 +1,12 @@
-import Counter from "./components/Counter";
+// import Counter from "./components/Counter";
 
 class HelloMessage extends React.Component {
   render() {
     return (
       <div>
-        <h1>hello</h1>
-        <div>
-          <h1>Hello StackBlitz!</h1>
-          <p>Start editing to see some magic happen :)</p>
-        </div>
-        <Counter />
+        <h1>Hello World</h1>
+
+        {/* <Counter /> */}
       </div>
     );
   }
