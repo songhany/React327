@@ -195,3 +195,61 @@ const clickBtn = $$("#button-container button").on("click", function (event) {
 //   });
 //   return this;
 // }
+
+// // class MyQuery - Old Version 
+// class MyQuery {
+//   constructor(query) {
+//     this.domElem = document.querySelector(query);  
+//   }
+
+//   html(innerHTML) {
+//     this.domElem.innerHTML = innerHTML
+//     return this;
+//   }
+//   on(eventType, cb) {
+//     this.domElem.addEventListener(eventType, cb);
+//     return this;
+//   }
+//   show() {
+//     // domElem.style.display = "block";
+//     this.domElem.style.removeProperty("display");
+//     return this;
+//   }
+//   addClass(className) {
+//     this.domElem.classList.add(className);
+//     return this;
+//   }
+
+
+//   before(htmlString) {
+//     const classNameMatchedElements = document.querySelectorAll("." + this.domElem.className);
+//     classNameMatchedElements.forEach((element) => {
+//       element.insertAdjacentHTML('beforebegin', htmlString);
+//     });
+//     return this;
+//   }
+
+//   after(htmlString) {
+//     const classNameMatchedElements = document.querySelectorAll("." + this.domElem.className);
+//     classNameMatchedElements.forEach((element) => {
+//       element.insertAdjacentHTML('afterend', htmlString);
+//     });
+//     return this;
+//   }
+
+//   prepend(htmlString) {
+//     const classNameMatchedElements = document.querySelectorAll("." + this.domElem.className);
+//     classNameMatchedElements.forEach((element) => {
+//       element.insertAdjacentHTML('afterbegin', htmlString);
+//     });
+//     return this;
+//   }
+
+//   append(htmlString) {
+//     const classNameMatchedElements = document.querySelectorAll("." + this.domElem.className);
+//     classNameMatchedElements.forEach((element) => {
+//       element.insertAdjacentHTML('beforeend', htmlString);
+//     });
+//     return this;
+//   }
+// }
