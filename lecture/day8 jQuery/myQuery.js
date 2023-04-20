@@ -12,30 +12,38 @@
 
 class MyQuery {
   constructor(query) {
-    this.domElem = document.querySelector(query);  
+    this.domElements = document.querySelectorAll(query);  
   }
 
   html(innerHTML) {
-    this.domElem.innerHTML = innerHTML
+    this.domElements.forEach((element) => {
+      element.innerHTML = innerHTML;
+    })
     return this;
   }
   on(eventType, cb) {
-    this.domElem.addEventListener(eventType, cb);
+    this.domElements.forEach((element) => {
+      element.addEventListener(eventType, cb);
+    })
     return this;
   }
   show() {
-    // domElem.style.display = "block";
-    this.domElem.style.removeProperty("display");
+    this.domElements.forEach((element) => {
+      // this.domElements.style.display = "block";
+      element.style.removeProperty("display");
+    })
     return this;
   }
   addClass(className) {
-    this.domElem.classList.add(className);
+    this.domElements.forEach((element) => {
+      element.classList.add(className);
+    });
     return this;
   }
 
 
   before(htmlString) {
-    const classNameMatchedElements = document.querySelectorAll("." + this.domElem.className);
+    const classNameMatchedElements = document.querySelectorAll("." + this.domElements[0].className);
     classNameMatchedElements.forEach((element) => {
       element.insertAdjacentHTML('beforebegin', htmlString);
     });
@@ -43,7 +51,7 @@ class MyQuery {
   }
 
   after(htmlString) {
-    const classNameMatchedElements = document.querySelectorAll("." + this.domElem.className);
+    const classNameMatchedElements = document.querySelectorAll("." + this.domElements[0].className);
     classNameMatchedElements.forEach((element) => {
       element.insertAdjacentHTML('afterend', htmlString);
     });
@@ -51,7 +59,7 @@ class MyQuery {
   }
 
   prepend(htmlString) {
-    const classNameMatchedElements = document.querySelectorAll("." + this.domElem.className);
+    const classNameMatchedElements = document.querySelectorAll("." + this.domElements[0].className);
     classNameMatchedElements.forEach((element) => {
       element.insertAdjacentHTML('afterbegin', htmlString);
     });
@@ -59,7 +67,7 @@ class MyQuery {
   }
 
   append(htmlString) {
-    const classNameMatchedElements = document.querySelectorAll("." + this.domElem.className);
+    const classNameMatchedElements = document.querySelectorAll("." + this.domElements[0].className);
     classNameMatchedElements.forEach((element) => {
       element.insertAdjacentHTML('beforeend', htmlString);
     });
@@ -140,6 +148,7 @@ $$(".inner").append("<p>append</p>");
 //   },
 // });
 
+
 // $$( "button.continue ")
 //   .html("Next Step...")
 //   .on("click", ()=> {
@@ -154,35 +163,35 @@ $$(".inner").append("<p>append</p>");
 // });
 
 
-// const continueBtn = $$("button.continue")
-//   .html("Next Step...")
-//   .on("click", () => {
-//     console.log("continue");
-//   })
-//   .addClass("red");
+const continueBtn = $$("button.continue")
+  .html("Next Step...")
+  .on("click", () => {
+    console.log("continue");
+  })
+  .addClass("red");
 
-// const hiddenBox = $$("#banner-message");
-// const clickBtn = $$("#button-container button").on("click", function (event) {
-//   hiddenBox.show();
-//   // console.log("event clicked")
-// });
+const hiddenBox = $$("#banner-message");
+const clickBtn = $$("#button-container button").on("click", function (event) {
+  hiddenBox.show();
+  // console.log("event clicked")
+});
 
 
 
-  // Homework:
-  // 1. Recreate Jquery on your own
-  // 2. add three new methods from the API documentation
-  // https://stackoverflow.com/questions/14846506/append-prepend-after-and-before#:~:text=before()%20.-,.,The%20vice%2Dversa%20is%20for%20.
-  // 
-  // after(htmlString) {
-  //   const parser = new DOMParser();
-  //   const htmlElement = parser.parseFromString(htmlString, "text/html").body.firstChild;
-  //   const classNameMatchedElements = document.querySelectorAll("." + this.domElem.className);
-  //   classNameMatchedElements.forEach((element) => {
-  //     // console.log(element);
-  //     // console.log(element.parentNode);
-  //     // console.log(element.nextSibling);
-  //     element.parentNode.insertBefore(htmlElement.cloneNode(true), element.nextSibling);  // use parentNode.insertBefore to insert a cloned version of the new HTML element after it. The insertBefore method takes two arguments: the new element to insert, and the reference node (in this case, the next sibling of the current element). 
-  //   });
-  //   return this;
-  // }
+// Homework:
+// 1. Recreate Jquery on your own
+// 2. add three new methods from the API documentation
+// https://stackoverflow.com/questions/14846506/append-prepend-after-and-before#:~:text=before()%20.-,.,The%20vice%2Dversa%20is%20for%20.
+// 
+// after(htmlString) {
+//   const parser = new DOMParser();
+//   const htmlElement = parser.parseFromString(htmlString, "text/html").body.firstChild;
+//   const classNameMatchedElements = document.querySelectorAll("." + this.domElements.className);
+//   classNameMatchedElements.forEach((element) => {
+//     // console.log(element);
+//     // console.log(element.parentNode);
+//     // console.log(element.nextSibling);
+//     element.parentNode.insertBefore(htmlElement.cloneNode(true), element.nextSibling);  // use parentNode.insertBefore to insert a cloned version of the new HTML element after it. The insertBefore method takes two arguments: the new element to insert, and the reference node (in this case, the next sibling of the current element). 
+//   });
+//   return this;
+// }
