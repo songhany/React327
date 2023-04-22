@@ -22,7 +22,7 @@ module.exports = {
         test: /\.(?:js|mjs|cjs)$/,  // regex check file type with file extension
         exclude: /node_modules/,    // don't pack  node_modules
         use: {  // "use" below rules to pre-process files
-          loader: 'babel-loader',  
+          loader: 'babel-loader',  // we have babel-loader, so we don't need babel.config.json file. This part blow implement the same functionailty as babel.config.json
           options: {
             presets: [
               ['@babel/preset-env', { targets: "defaults" }, 
