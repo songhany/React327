@@ -67,7 +67,6 @@ function App() {
 
 export default App;
 
-
 // keep components pure
 
 // pure function
