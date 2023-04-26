@@ -1,4 +1,4 @@
-import { Foo } from "./Foo";
+import { Foo } from "./Person";
 export default Foo
 
 
