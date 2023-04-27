@@ -7,6 +7,8 @@ const API = "https://jsonplaceholder.typicode.com/posts";
 // write jsx, we are going to render the list
 
 export default class FetchAPI extends Component {
+  // NEVER make API call in constructor function, since this makes your components impure.
+  // In the constructor, we are not supposed to have any side effect during "Render phase".
   constructor(props) {
     super(props);
     this.state = {
@@ -18,6 +20,7 @@ export default class FetchAPI extends Component {
   // IMPORTANT: During the "Render phase", the component should Always be pure.  https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
   // i.e. Up until you call the render method, the components should always be pure.
   // Making a API call is a side effect. For all of those side effects, we only trigger them after the "render()" method is complete, so the place to make the API request is inside "componentDidMount()" method.
+  // 1st way of Making API request:
   // componentDidMount() {
   //   fetch(API)
   //     .then(res => res.json())
@@ -26,7 +29,8 @@ export default class FetchAPI extends Component {
   //     });
   // }
 
-  // instead of trigger fetch(API) call right after the component Mounted using above code, we can also choose to make a API call after the button is clicked.
+  // ALTERNATIVE: instead of trigger fetch(API) call right after the component Mounted using above code, we can also choose to make a API call after the button is clicked.
+  // 2nd way of Making API request:
   handleAPICall() {
     fetch(API)
     .then(res => res.json())
