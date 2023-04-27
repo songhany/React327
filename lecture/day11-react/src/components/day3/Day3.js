@@ -5,7 +5,17 @@ class Child extends Component {
     return <div style={{border: "1px solid black"}}>
       <h2>Child</h2>
       <div>Count from parent: {this.props.count}</div>
-      <button onClick={() => this.props.handleAdd()}>child btn</button>
+      <button onClick={this.props.handleAdd}>child btn</button>
+    </div>;
+  }
+}
+
+class Child2 extends Component {
+  render() {
+    return <div style={{border: "1px solid black"}}>
+      <h2>Child</h2>
+      <div>Count from parent: {this.props.count}</div>
+      <button onClick={this.props.handleAdd}>child btn</button>
     </div>;
   }
 }
@@ -23,6 +33,7 @@ export default class Day3 extends Component {
   handleAdd() {
     this.setState({ count: this.state.count + 1 })
   }
+  
   render() {
     return (
       <div>
@@ -30,6 +41,7 @@ export default class Day3 extends Component {
         <div>Count in parent: {this.state.count}</div>
         <button onClick={this.handleAdd}>parent btn</button>
         <Child count={this.state.count} handleAdd={this.handleAdd}/>
+        <Child2 count={this.state.count} />
       </div>
     )
   }
