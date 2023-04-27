@@ -35,7 +35,7 @@ export default class Immutable extends Component {
             name: "John"
           }
           // this.state.people.push(newPerson)  // Important: Don't mutate the state directly in React. https://stackoverflow.com/questions/37755997/why-cant-i-directly-modify-a-components-state-really
-          const newPeopleList = [...this.state.people, newPerson];
+          const newPeopleList = [...this.state.people, newPerson];  // better to use [...this.state.XXX, newXXX] to create a new.
           this.setState({people: newPeopleList});
         }}>Add Person</button>
 
