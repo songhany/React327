@@ -2,11 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import Day3 from './components/day3/Day3';
-import Immutable from './components/day3/Immutable'
+
 
 function App() {
   return (
-    <Immutable num={100}/>
+    <Day3 num={100}/>
   );
 }
 
