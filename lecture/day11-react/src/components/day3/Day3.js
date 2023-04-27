@@ -9,7 +9,7 @@ export default class Day3 extends Component {
   render() {
     return (
       <div>
-        <FetchAPI />
+        <ParentChild />
       </div>
     )
   }

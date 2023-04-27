@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Child from './Child';
 
 const peopleList = [
   { id: 1, name: "Alice", gender: "Female", age: 25 },
@@ -14,26 +15,14 @@ export default class Day2 extends Component {
     this.state = {
       count: 0,
       theme: "dark",
-      people: peopleList
+      //people: peopleList
     };
     this.handleAdd = this.handleAdd.bind(this);
     this.toggleTheme = this.toggleTheme.bind(this);
 
-    console.log("component is created");
+    // console.log("Render phase", "component is created");
   }
   
-  handleAdd() {
-    // console.log("this", this);
-    this.setState({count: this.state.count + 1})
-    // console.log(this.state);
-  }
-
-  toggleTheme() {
-    this.setState({ 
-      theme : this.state.theme === "light" ? "dark" : "light"
-    })
-  }
-
   componentDidMount() {
     console.log("Commit phase:", "Component did mount")
   }
@@ -49,22 +38,35 @@ export default class Day2 extends Component {
   // }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.count !== this.state.count) {
-      console.log("count changed");
-    }
-    if (prevState.theme !== this.state.theme) {
-      console.log("theme changed");
-    }
+    // if (prevState.count !== this.state.count) {
+    //   console.log("count changed");
+    // }
+    // if (prevState.theme !== this.state.theme) {
+    //   console.log("theme changed");
+    // }
     // console.log("component just updated")
+  }
+
+
+  handleAdd() {
+    // console.log("this", this);
+    this.setState({count: this.state.count + 1})
+    // console.log(this.state);
+  }
+
+  toggleTheme() {
+    this.setState({ 
+      theme : this.state.theme === "light" ? "dark" : "light"
+    })
   }
 
   render() {
     console.log("Render phase:", "now being rendered")
     return (
       <div>
-        <div>{this.props.num}</div>
-        <div>State: {this.state.count}</div>
-        <div>State: {this.state.theme}</div>
+        <h1>Parent Component</h1>
+        <div>State count: {this.state.count}</div>
+        <div>Theme: {this.state.theme}</div>
         {/* <div>
           <h3>people</h3>
           {this.state.people.map(person => {
@@ -78,6 +80,8 @@ export default class Day2 extends Component {
         </div> */}
         <button onClick={this.handleAdd}>Add</button>
         <button onClick={this.toggleTheme}>Change Theme</button>
+        <Child count={this.state.count}/>
+        {/* <Child /> */}
       </div>
     )
   }
@@ -102,6 +106,7 @@ export default class Day2 extends Component {
 */
 
 // diffing algorithm is just the algorithm used to the find the differences between two virtual DOM
+
 // virtual DOM is just a copy of the real DOM
 
 // reconciliation is the process of using diffing algorithm
