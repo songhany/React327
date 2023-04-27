@@ -22,12 +22,12 @@ export default class Child extends Component {
   // If Child is very big component, then reconciliation will take longer and our app is not very performant, we can optimize performance by using shouldComponentUpdate(nextProps,nextState) to prevent unnecessary rerender.
   shouldComponentUpdate(nextProps, nextState) {  // prevent unnecessary rerender
     const propKeys = Object.keys(nextProps)
-    for(let i=0; i < propKeys.length; i++){
+    for (let i=0; i < propKeys.length; i++) {
       const key = propKeys[i];
       if(nextProps[key] !== this.props[key]) return true;
     } 
     const stateKeys = Object.keys(nextState)
-    for(let i=0; i < stateKeys.length; i++){
+    for (let i=0; i < stateKeys.length; i++) {
       const key = stateKeys[i];
       if(nextState[key] !== this.state[key]) return true;
     } 
