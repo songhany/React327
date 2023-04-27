@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Day1 from './components/Day1'
+import Day2 from './components/day2/Day2'
 
 
 function App() {
   return (
-    <Day1 />
+    <Day2 num={100}/>
   );
 }
 
