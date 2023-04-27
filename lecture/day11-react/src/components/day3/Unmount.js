@@ -42,7 +42,7 @@ export default class Unmount extends Component {
 class Child extends Component {
   constructor(props) {
     super(props);
-    this.timeoutId = null;
+    this.timeoutIds = [];
   }
 
   componentDidMount() {
@@ -55,7 +55,10 @@ class Child extends Component {
 
   componentWillUnmount() {  // 1. clean up all of side effects, ex. const timeoutId = setTimeout(() => {console.log('sth.'); }, 1500)  // 2. disconnect with database, server and tool
     // console.log("child is going to unmount");
-    clearTimeout(this.timeoutId);  // only clear the last one
+    // clearTimeout(this.timeoutId);  // only clear the last one
+    this.timeoutIds.forEach((id) => {
+      clearTimeout(id);
+    })
   }
 
   render() {
@@ -63,9 +66,10 @@ class Child extends Component {
       <div>
         <h3>Child</h3>
         <button onClick={() => {
-          this.timeoutId = setTimeout(() => {
+          const timeoutId = setTimeout(() => {
             console.log("something");
           }, 2000)
+          this.timeoutIds.push(timeoutId);
         }}>Async Logger</button>
       </div>
     )
