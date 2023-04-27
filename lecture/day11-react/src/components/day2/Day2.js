@@ -107,3 +107,9 @@ export default class Day2 extends Component {
 // reconciliation is the process of using diffing algorithm
 // to compare the two copies of virtual dom
 // and then applpy the minimum amount of updates to the real DOM
+
+
+// ### What makes component rerendered ?
+// 1. state change
+// 2. parent rerender causes all children to rerender
+// 3. props change
