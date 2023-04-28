@@ -4,11 +4,12 @@ import React from 'react';
 import Day1 from './components/day1/Day1';
 import Day2 from './components/day2/Day2';
 import Day3 from './components/day3/Day3';
+import Day4 from './components/day4/Day4';
 
 
 function App() {
   return (
-    <Day2 num={100}/>
+    <Day4 num={100}/>
   );
 }
 

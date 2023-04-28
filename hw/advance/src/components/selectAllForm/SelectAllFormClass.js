@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import "./styles.css";
 
 export default class SelectAllForm extends Component {
   constructor(props) {
@@ -72,37 +72,27 @@ export default class SelectAllForm extends Component {
         <label htmlFor="selectAll">Select All</label>
 
         <br />
-        <input
-          type="checkbox"
-          className="kosher"
-          name="kosherChecked"
-          checked={this.state.kosherChecked}
+        <input type="checkbox" className="kosher" name="kosherChecked" checked={this.state.kosherChecked}
           onChange={(event) => this.handleCheckboxChange(event)}
         />
         <label htmlFor="kosher">Kosher</label>
 
         <br />
-        <input
-          type="checkbox"
-          className="no-celery"
-          name="noCeleryChecked"
-          checked={this.state.noCeleryChecked}
+        <input type="checkbox" className="no-celery" name="noCeleryChecked" checked={this.state.noCeleryChecked}
           onChange={(event) => this.handleCheckboxChange(event)}
         />
         <label htmlFor="no-celery">No Celery (inc celeriac)</label>
 
         <br />
-        <input
-          type="checkbox"
-          className="no-egg"
-          name="noEggChecked"
-          checked={this.state.noEggChecked}
+        <input type="checkbox" className="no-egg" name="noEggChecked" checked={this.state.noEggChecked}
           onChange={(event) => this.handleCheckboxChange(event)}
         />
         <label htmlFor="no-egg">No Egg</label>
 
         <br />
-        <input type='submit' value='Clear All' onClick={() => this.clearAll()} />
+        <div className="clearAll" onClick={this.clearAll}>
+          Clear All
+        </div>
       </div>
     )
   }
