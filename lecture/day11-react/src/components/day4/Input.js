@@ -54,8 +54,5 @@ function Checkbox() {
   //   handleCheck(e, "message");
   // }
 
-  return <input 
-    type="checkbox" 
-    checked={checked} 
-    onChange={e => handleCheck(e, "message")} />;
+  return <input type="checkbox" checked={checked} onChange={e => handleCheck(e, "message")} />;
 }
