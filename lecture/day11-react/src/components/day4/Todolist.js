@@ -27,7 +27,7 @@ export default function Todolist() {
 
   return (
     <div>
-      <h1>Todolis</h1>
+      <h1>Todolist</h1>
       <input value={newTitle} onChange={(e) => setNewTitle(e.target.value)} />
       <button onClick={handleAddTodo}>ADD todo</button>
       <div>
