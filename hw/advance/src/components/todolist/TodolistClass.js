@@ -18,7 +18,7 @@ export default class TodolistClass extends Component {
     };
 
     const newTodos = [...this.state.todos, newTodo];
-    this.setState({ todos: newTodos, newTitle: "" });
+    this.setState({ todos: newTodos, newTitle: "" });  // newTitle: "" for clearing input field
   }
 
   removeTodo(todoId) {
@@ -34,7 +34,7 @@ export default class TodolistClass extends Component {
         return todo;
       }
     });
-    this.setState({ todos: newTodos, newTitle: "" });  // Clear input field
+    this.setState({ todos: newTodos, newTitle: "" });  // newTitle: ""  for clearing input field
   }
 
   render() {
