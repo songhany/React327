@@ -1,8 +1,14 @@
 import React from 'react'
-import SelectForm from './SelectForm'
+import Counter from './Counter'
+import Account from './Account'
 
-export default function day5() {
+// HOCs (higher order components), helps us reuse logic
+export default function Day5() {
   return (
-    <SelectForm />
+    <div>
+      <Counter name="Songhan" a="a"/> 
+
+      <Account />
+    </div>
   )
 }
