@@ -41,4 +41,7 @@ class Counter extends React.Component {  // track how many time user clicked
 
 // const NewComponent = withCounter(Counter)
 // console.log(NewComponent)
-export default withCounter(withLogging(Counter));
+export default withCounter(withLogging(Counter), {
+  initCount: 10,
+  // title: "Customized title"
+});

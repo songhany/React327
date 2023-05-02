@@ -4,15 +4,28 @@ import React from "react";
 // but it's not a component
 // it's just a function that takes in a Component as argument
 // and returns a new Component
-// hoc prevent redundancy and writing same logic repetitively
+// HOC prevent redundancy and writing same logic repetitively
 
-export default function withCounter(Component, initCount=0) {  // this function return a Component
+const DEFAULT_CONFIG_OPT = {
+  initCount: 0,
+  title: "DEFAULT_CONFIG_OPT title"
+}
+
+export default function withCounter(Component, configOpt={initCount: 0, title: "Counter"}) {  // this function return a Component
   
+  configOpt = {
+    ...DEFAULT_CONFIG_OPT,
+    ...configOpt
+  }
+
   return class NewComponent extends React.Component {
     constructor(props) {
       super(props);
+
+      console.log(configOpt);
+
       this.state = {
-        count: initCount,
+        count: configOpt.initCount,
       }
       // this.increment = this.increment.bind(this);
       // this.decrement = this.decrement.bind(this);
@@ -34,20 +47,23 @@ export default function withCounter(Component, initCount=0) {  // this function 
     }
 
     reset = () => {
-      this.setState({ count: 0 });
+      this.setState({ count: configOpt.initCount });
     }
 
     render = () => {
       // console.log(this.props); // props is Obj, pass all props to Component using {...this.props}
       return (
-        <Component 
-          {...this.props} 
-          count={this.state.count}
-          increment={this.increment}
-          decrement={this.decrement}
-          incrementByAmount={this.incrementByAmount}
-          reset={this.reset}  
-        />
+        <div>
+          <div>{configOpt.title}</div>
+          <Component 
+            {...this.props} 
+            count={this.state.count}
+            increment={this.increment}
+            decrement={this.decrement}
+            incrementByAmount={this.incrementByAmount}
+            reset={this.reset}  
+          />
+        </div>
       );
     }
   }
