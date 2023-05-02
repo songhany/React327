@@ -1,7 +1,7 @@
 import React from 'react'
 import { Fragment } from 'react'
-import Person from '../Person'
-import Whatever from '../Person'
+import Person from './Person'
+import Whatever from './Person'
 
 const isShown = true;
 
