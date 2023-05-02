@@ -1,0 +1,14 @@
+.title {
+  background-color: rgb(225, 240, 60);
+  padding: 1rem;
+}
+
+.clearAll {
+  border: 1px solid green;
+  color: green;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+}
