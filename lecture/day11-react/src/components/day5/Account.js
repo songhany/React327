@@ -34,3 +34,5 @@ class Account extends React.Component {  // deposit money
 
 // const NewAccount = withCounter(Account);
 export default withCounter(Account);
+
+// export default withA(withB(withC(withD(withE(Account)))));  // if we try to re-use multiple HOC logic, could cause 'HOC hell'
