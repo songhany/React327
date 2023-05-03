@@ -12,7 +12,7 @@ import { useState, useEffect } from "react";
 
 export default function useCounter() {
   const [count, setCount] = useState(0);
-  console.log("custom hook runs");
+  // console.log("custom hook runs");
 
   function increment() {
     setCount(count + 1);
