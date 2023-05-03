@@ -6,7 +6,7 @@ import Day2 from './components/day2/Day2';
 import Day3 from './components/day3/Day3';
 import Day4 from './components/day4/Day4';
 // import Day5 from './components/day5/Day5';
-import Day6 from './components/custom-hook/Day6';
+import Day6 from './components/day6 custom-hook/Day6';
 
 
 function App() {
