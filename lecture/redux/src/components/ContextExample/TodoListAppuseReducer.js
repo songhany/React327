@@ -1,4 +1,4 @@
-import React, { useContext, useReducer } from 'react';
+import React, { useContext, useEffect, useReducer } from 'react';
 import { createContext, useState } from 'react';
 import { TodosContext } from '../../context/TodosContext';
 import { ThemeContext } from '../../context/ThemeContext';
@@ -10,21 +10,17 @@ import { ThemeContext } from '../../context/ThemeContext';
 const DEFAULT_TODOS = [
   {
     "id": 1,
-    "title": "eat",
-  },
-  {
-    "id": 2,
     "title": "run",
   },
   {
-    "id": 3,
+    "id": 2,
     "title": "code",
   },
 ]
 
-let id = 4;
+let id = 3;
 
-function todosReducer(prevTodos, action) {
+function todosReducer(prevTodos, action) {  // Reducer should be pure function
   switch(action.type) {
     case "ADD_TODO":
       const title = action.payload;
@@ -41,7 +37,6 @@ function todosReducer(prevTodos, action) {
     case "EDIT_TODO":
       // console.log(action.payload);
       const {id: idToEdit, newTitle} = action.payload;
-      // console.log(newTitle);
 
       return prevTodos.map(todo => {
         if (todo.id === idToEdit) {
@@ -91,12 +86,17 @@ function TodoList({ setTodos }) {
 function Todo({ todo }) {
   const { dispatchTodos } = useContext(TodosContext);
   const [ editing, setEditing ] = useState(false);
-  const [ newTitle, setNewTitle ] = useState("");
+  const [ newTitle, setNewTitle ] = useState(todo.title);
+  useEffect(() => {
+    setNewTitle(todo.title)
+  }, [todo])
 
   return editing ? ( 
-    <div>
+    // onSubmit={e => e.preventDefault()} make us can 'Enter carriage return' to save the change
+    <form onSubmit={e => e.preventDefault()}> 
       <input value={newTitle} onChange={(e) => setNewTitle(e.target.value)} />
-      <button 
+      <button
+        type='submit' 
         onClick={() => {
           dispatchTodos({
             type: "EDIT_TODO", 
@@ -107,8 +107,8 @@ function Todo({ todo }) {
           });
           setEditing(false);
         }}>save</button>
-      <button onClick={() => setEditing(false)}>cancel</button>
-    </div>
+      <button type='button' onClick={() => setEditing(false)}>cancel</button>
+    </form>
   ) : (
     <div>
       <div>{todo.title}</div>
