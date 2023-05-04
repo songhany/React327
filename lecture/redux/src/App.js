@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import TodoListApp from './components/ContextExample/TodoListApp';
-import TodoListAppuseReducer from './components/ContextExample/TodoListAppuseReducer';
+import TodoListApp from './components/TodoListAppuseContext';
+import TodoListAppuseReducer from './components/TodoListAppuseReducer';
 import LearnReducer from './components/LearnReducer/LearnReducer';
 
 function App() {

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { createContext, useState } from 'react';
-import { TodosContext } from '../../context/TodosContext';
-import { ThemeContext } from '../../context/ThemeContext';
+import { TodosContext } from '../context/TodosContext';
+import { ThemeContext } from '../context/ThemeContext';
 
 // prop drilling is annoying
 // Context helps avoid prop drilling
@@ -16,11 +16,6 @@ const DEFAULT_TODOS = [
   {
     "id": 2,
     "title": "quis ut nam facilis et officia qui",
-    "completed": false
-  },
-  {
-    "id": 3,
-    "title": "fugiat veniam minus",
     "completed": false
   },
 ]

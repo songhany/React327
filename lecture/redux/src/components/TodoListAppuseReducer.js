@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useReducer } from 'react';
 import { createContext, useState } from 'react';
-import { TodosContext } from '../../context/TodosContext';
-import { ThemeContext } from '../../context/ThemeContext';
+import { TodosContext } from '../context/TodosContext';
+import { ThemeContext } from '../context/ThemeContext';
 
 // prop drilling is annoying
 // Context helps avoid prop drilling
