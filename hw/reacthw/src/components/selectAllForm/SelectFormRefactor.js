@@ -10,7 +10,6 @@ export default function SelectForm() {
   const [ items, setItems ] = useState(data);
 
   function handleToggleCheckbox(e, name) {
-    // setItems()
     // console.log(e.target);
 
     const tempItems = [...items].map(item => {
