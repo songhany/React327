@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-export default function useSearch(url, numOfResult=10) {
+export default function useSearch(url) {
   const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState([]);
   const [hasMore, setHasMore] = useState(false);

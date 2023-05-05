@@ -11,7 +11,10 @@ const DEFAULT_CONFIG_OPT = {
   title: "DEFAULT_CONFIG_OPT title"
 }
 
-export default function withCounter(Component, configOpt={initCount: 0, title: "Counter"}) {  // this function return a Component
+export default function withCounter(Component, configOpt={
+  initCount: 0, 
+  title: "Counter"}
+) {  // this function return a Component
   
   configOpt = {
     ...DEFAULT_CONFIG_OPT,

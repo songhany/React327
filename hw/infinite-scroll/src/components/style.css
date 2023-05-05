@@ -1,3 +1,35 @@
+*,
+*::before,
+*::after{
+  margin:0;
+  padding:0;
+  box-sizing: inherit;
+  font-family: "Helvetica", sans-serif;
+}
+
+html{
+  font-size: 62.5%;   /* 10px */
+}
+
+body{
+  margin:0;
+  padding:0;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  font-family: "Helvetica", sans-serif;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .card {
   border: 1px solid rgb(175, 174, 174);
+  display: flex;
+  align-items: center;
+
+  height: 8rem;
+  border-radius: 10px;
+  padding: 1rem;
 }
