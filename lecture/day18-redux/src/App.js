@@ -7,11 +7,11 @@ import LearnReducer from './components/LearnReducer/LearnReducer';
 function App() {
   return (
     <div>
-      <A a="a">
+      {/* <A a="a">
         <div>children element</div>
       </A>
-      <LearnReducer />
-      <TodoListAppuseContext />
+      <LearnReducer /> */}
+      {/* <TodoListAppuseContext /> */}
       <TodoListAppuseReducer />
     </div>
   )
