@@ -1,36 +1,36 @@
 import React, {useState} from 'react'
-import {store} from '../store';
-import { useEffect } from 'react';
+import { store } from '../store';
+import useForceUpdate from '../hooks/useForceUpdate';
 console.log(store);
 
 store.subscribe(() => console.log("sth. changed"));  // trigger dispatch() will also trigger this function
 
-function useForceUpdate() {
-  const [bool, toggle] = useState(true);
+// function useForceUpdate() {
+//   const [bool, toggle] = useState(true);
 
-  function forceUpdate() {
-    toggle(prev => !prev);
-  }
+//   function forceUpdate() {
+//     toggle(prev => !prev);
+//   }
 
-  return forceUpdate;
-}
+//   return forceUpdate;
+// }
 
 
 export default function AnotherCounter() {
-  const forceUpdate = useForceUpdate();
   const count = store.getState();
+  // const forceUpdate = useForceUpdate();
   // console.log(count.value);
 
   function increment() {
     store.dispatch({ type: "increment" });
-    console.log(store.getState());
-    forceUpdate(prev => !prev);
+    // console.log(store.getState());
+    // forceUpdate(prev => !prev);
   }
 
   function decrement() {
     store.dispatch({ type: "decrement" });
-    console.log(store.getState());
-    forceUpdate(prev => !prev);
+    // console.log(store.getState());
+    // forceUpdate(prev => !prev);
   }
 
   // function reset() {

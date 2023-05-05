@@ -4,6 +4,8 @@ import { myCreateStore } from './library/myRedux';
 function counterReducer (
   state = {
     value: 0,
+    a: "a",
+    b: "c"
   },
   action
 ) {
@@ -22,7 +24,7 @@ function counterReducer (
 // export const store = createStore(counterReducer);
 export const store = myCreateStore(counterReducer);
 
-store.subscribe(() => console.log("sth. happened"));
-store.subscribe(() => console.log("sth."));
-store.dispatch({type: "increment"})
-store.dispatch({type: "increment"})
+// store.subscribe(() => console.log("sth. happened"));
+// store.subscribe(() => console.log("sth."));
+// store.dispatch({type: "increment"})
+// store.dispatch({type: "increment"})
