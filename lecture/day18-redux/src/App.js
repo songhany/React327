@@ -7,6 +7,9 @@ import LearnReducer from './components/LearnReducer/LearnReducer';
 function App() {
   return (
     <div>
+      <A a="a">
+        <div>children element</div>
+      </A>
       <LearnReducer />
       <TodoListAppuseContext />
       <TodoListAppuseReducer />
@@ -14,5 +17,11 @@ function App() {
   )
 }
 
+function A({a, children}) {
+  console.log(children);
+  return <div>
+    {children}
+  </div>
+}
 
 export default App;
