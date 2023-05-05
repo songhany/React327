@@ -1,27 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
-import TodoListAppuseContext from './components/TodoListAppContext';
-import TodoListAppuseReducer from './components/TodoListAppReducer';
-import LearnReducer from './components/LearnReducer/LearnReducer';
+import Counter from './components/Counter';
+import AnotherCounter from './components/AnotherCounter';
+import React from 'react';
+import { useState, useEffect } from 'react';
+import useForceUpdate from './hooks/useForceUpdate';
+import {store} from './store';
+// console.log(store);
+
+// when app gets big, state relationship/management becomes complext
+// redux helps with that by giving
+// 1. single source of truth: global state
+// 2. we use dispatch / reducers to update the state
 
 function App() {
+  const forceUpdate = useForceUpdate();
+  useEffect(() => {
+    store.subscribe(forceUpdate);
+  }, []);
+  
   return (
     <div>
-      {/* <A a="a">
-        <div>children element</div>
-      </A>
-      <LearnReducer /> */}
-      {/* <TodoListAppuseContext /> */}
-      <TodoListAppuseReducer />
+      <Counter/>
+      <AnotherCounter />
     </div>
   )
 }
 
-function A({a, children}) {
-  console.log(children);
-  return <div>
-    {children}
-  </div>
-}
-
 export default App;
+
+
+// Redux per se is a global store, we can use it in any frontend library
+// For React, in order to use Redux, we use react-redux library to connect Redux and React Application
