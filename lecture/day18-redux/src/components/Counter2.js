@@ -16,7 +16,7 @@ store.subscribe(() => console.log("sth. changed"));  // trigger dispatch() will 
 // }
 
 
-export default function AnotherCounter() {
+export default function Counter2() {
   const count = store.getState();
   // const forceUpdate = useForceUpdate();
   // console.log(count.value);

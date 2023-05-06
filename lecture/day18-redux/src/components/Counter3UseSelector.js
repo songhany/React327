@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useMyDispatch, useMySelector } from '../library/myReactRedux';
 
 
-export default function AnotherCounterUseSelector() {
+export default function Counter3UseSelector() {
   // ### useSelector: reads state from the store
   // const selectState = state => state;
   // const state = useSelector(state => state);
