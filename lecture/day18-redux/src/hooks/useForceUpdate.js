@@ -5,6 +5,7 @@ export default function useForceUpdate() {
 
   function forceUpdate() {
     toggle((prev) => !prev);
+    console.log("force update triggered");
   }
 
   return forceUpdate;

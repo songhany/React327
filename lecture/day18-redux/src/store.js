@@ -21,8 +21,8 @@ function counterReducer (
 
 // console.log(counterReducer(undefined, {type:""}))
 
-// export const store = createStore(counterReducer);
-export const store = myCreateStore(counterReducer);
+export const store = createStore(counterReducer);
+// export const store = myCreateStore(counterReducer);
 
 // store.subscribe(() => console.log("sth. happened"));
 // store.subscribe(() => console.log("sth."));

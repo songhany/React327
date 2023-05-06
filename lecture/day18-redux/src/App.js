@@ -7,8 +7,9 @@ import { useState, useEffect } from 'react';
 import useForceUpdate from './hooks/useForceUpdate';
 import { store } from './store';
 
-// import { Provider } from 'react-redux';
-import { MyProvider } from './library/myReactRedux';
+import { Provider } from 'react-redux';
+// import { MyProvider } from './library/myReactRedux';
+import ClassCounter from './components/ClassCounter';
 
 // console.log(store);
 
@@ -24,11 +25,19 @@ function App() {
   // }, []);
   
   return (
-    <MyProvider store={store}>
+    <Provider store={store}>
       {/* <Counter/> */}
       {/* <AnotherCounter /> */}
       <AnotherCounterUseSelector />
-    </MyProvider>
+      <ClassCounter />
+    </Provider>
+
+    // <MyProvider store={store}>
+    //   <Counter/>
+    //   {/* <AnotherCounter /> */}
+    //   <AnotherCounterUseSelector />
+    //   <ClassCounter />
+    // </MyProvider>
   )
 }
 
