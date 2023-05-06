@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+
+*,
+*::before,
+*::after{
+  margin:0;
+  padding:0;
+  box-sizing: inherit;
+  font-family: "Helvetica", sans-serif;
+}
+
+html{
+  font-size: 62.5%;   /* 10px */
+}
+
+body{
+  margin:0;
+  padding:0;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  font-family: "Helvetica", sans-serif;
+}
+
+.todo-list-container {
+  /* border: 1px solid rgb(175, 174, 174); */
+  text-align: center;
+  height: 50rem;
+}
+
+.todo-item-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-item {
+  /* border: 1px solid rgb(175, 174, 174); */
+  /* display: flex; */
+  padding: 0.5rem;
+}
