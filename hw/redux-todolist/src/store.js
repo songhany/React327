@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
 
-// reducers
-const initialState = {
+// reducers. We can create another reducers.js and import it into store.js
+const initialState = {  // the STATE of the app 
   todos: [],
   newTitle: ""
 };

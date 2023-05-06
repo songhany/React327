@@ -1,7 +1,7 @@
 import './App.css';
 import Counter from './components/Counter';
-import AnotherCounter from './components/AnotherCounter';
-import AnotherCounterUseSelector from './components/AnotherCounterUseSelector';
+import Counter2 from './components/Counter2';
+import Counter3UseSelector from './components/Counter3UseSelector';
 import React from 'react';
 import { useState, useEffect } from 'react';
 import useForceUpdate from './hooks/useForceUpdate';
@@ -27,8 +27,8 @@ function App() {
   return (
     <Provider store={store}>
       {/* <Counter/> */}
-      {/* <AnotherCounter /> */}
-      <AnotherCounterUseSelector />
+      {/* <Counter2 /> */}
+      <Counter3UseSelector />
       <ClassCounter />
     </Provider>
 
