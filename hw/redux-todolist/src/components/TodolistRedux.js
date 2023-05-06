@@ -29,8 +29,8 @@ export default function TodolistRedux() {
     <Provider store={store}>
       <div className="todo-list-container">
         <h1>Todo List</h1>
-        <input value={newTitle} onChange={(e) => setNewTitle(e.target.value)} />
-        <button onClick={handleAddTodo}>ADD todo</button>
+        <input className='todo-input' value={newTitle} onChange={(e) => setNewTitle(e.target.value)} placeholder='Add new todo'/>
+        <button className='add__btn' onClick={handleAddTodo}>ADD todo</button>
 
         <div className="todo-item-container">
           {todos.map((todo) => {
@@ -38,8 +38,10 @@ export default function TodolistRedux() {
               <div key={todo.id} className='todo-item' onClick={() => handleToggle(todo.id)} style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
                 {todo.title}
                 
-                <button onClick={() => handleRemoveTodo(todo.id)}> REMOVE</button>
-                <button onClick={() => handleEditTodo(todo.id, newTitle)}> EDIT</button>
+                <span className='todo-actions'> 
+                  <button className='edit__btn' onClick={() => handleEditTodo(todo.id, newTitle)}>EDIT</button>
+                  <button className='remove__btn' onClick={() => handleRemoveTodo(todo.id)}>REMOVE</button>
+                </span>
               </div>
             );
           })}
