@@ -35,12 +35,13 @@ export default function TodolistRedux() {
         <div className="todo-item-container">
           {todos.map((todo) => {
             return (
-              <div key={todo.id} className='todo-item' onClick={() => handleToggle(todo.id)} style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
+              <div key={todo.id} className='todo-item' style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
                 {todo.title}
                 
                 <span className='todo-actions'> 
                   <button className='edit__btn' onClick={() => handleEditTodo(todo.id, newTitle)}>EDIT</button>
                   <button className='remove__btn' onClick={() => handleRemoveTodo(todo.id)}>REMOVE</button>
+                  <button className='complete__btn' onClick={() => handleToggle(todo.id)}>COMPLETE</button>
                 </span>
               </div>
             );
