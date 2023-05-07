@@ -6,7 +6,7 @@ const initialState = {  // the STATE of the app
   newTitle: ""
 };
 
-function todolistReducerreducer(state = initialState, action)  {
+function todolistReducer(state = initialState, action)  {
   switch (action.type) {
     case 'ADD_TODO':
       const newTodo = {
@@ -43,6 +43,6 @@ function todolistReducerreducer(state = initialState, action)  {
   }
 }
 
-const store = createStore(todolistReducerreducer);
+const store = createStore(todolistReducer);
 
 export default store;
