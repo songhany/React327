@@ -8,6 +8,7 @@ const initialState = {  // the STATE of the app
 
 function todolistReducer(state = initialState, action)  {
   switch (action.type) {
+    
     case 'ADD_TODO':
       const newTodo = {
         id: state.todos.length + 1,
@@ -43,6 +44,7 @@ function todolistReducer(state = initialState, action)  {
   }
 }
 
+// store.js create a store with reducer
 const store = createStore(todolistReducer);
 
 export default store;

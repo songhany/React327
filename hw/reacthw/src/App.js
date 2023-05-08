@@ -9,12 +9,13 @@ import './App.css';
 // import TodolistClass from './components/todolist/TodolistClass';
 // import TodolistFun from './components/todolist/TodolistFun'
 // import AddTwoNumber from './components/addTwoNumber/AddTwoNumber'
-import Counter from './components/custom-hook/Counter';
+// import Counter from './components/custom-hook/Counter';
+import Timer from './components/timer/Timer';
 
 function App() {
   return (
     <div>
-      <Counter />
+      <Timer />
     </div>
   );
 }

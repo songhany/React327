@@ -1,16 +1,15 @@
 import React, { Component } from "react";
-import store from "./store";
-//import user from "./images/user.png";
-import "./App.css";
-import UserCard from "./components/UserCard";
+import HelloWorld from "./components/HelloWorld";
+import ButtonGroup from "./components/ButtonGroup";
+import { store } from "./store";
 
 class App extends Component {
   render() {
-    return (
-      <UserCard />
-    )
+    return [
+      <HelloWorld key={1} tech={store.getState().tech} />,
+      <ButtonGroup key={2} technologies={["React", "Elm", "React-redux"]} />
+    ]; 
   }
-}
-
+} 
+        
 export default App;
-

@@ -4,8 +4,8 @@ import store from '../store';
 import { addTodo, removeTodo, editTodo, toggleTodo } from './actions';
 
 export default function TodolistRedux() {
-  const todos = useSelector(state => state.todos);
   const dispatch = useDispatch();
+  const todos = useSelector(state => state.todos);
   const [newTitle, setNewTitle] = useState("");
 
   function handleAddTodo() {
