@@ -1,6 +1,6 @@
 import './App.css';
 import Counter from './components/Counter';
-import Counter2 from './components/Counter2';
+import CounterBackup from './components/CounterBackup';
 import Counter3UseSelector from './components/Counter3UseSelector';
 import React from 'react';
 import { useState, useEffect } from 'react';
@@ -27,15 +27,15 @@ function App() {
   return (
     <Provider store={store}>
       {/* <Counter/> */}
-      {/* <Counter2 /> */}
+      {/* <CounterBackup /> */}
       <Counter3UseSelector />
       <ClassCounter />
     </Provider>
 
     // <MyProvider store={store}>
     //   <Counter/>
-    //   {/* <AnotherCounter /> */}
-    //   <AnotherCounterUseSelector />
+    //   <CounterBackup />
+    //   <Counter3UseSelector />
     //   <ClassCounter />
     // </MyProvider>
   )
