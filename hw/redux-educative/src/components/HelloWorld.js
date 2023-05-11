@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
 
-export default function HelloWorld() {
+const HelloWorld = ({ tech }) => {
   return (
-    <div>HelloWorld</div>
-  )
-}
+    <div className="hello-world">
+      Hello World <span className="hello-world__tech">{tech}!</span>
+    </div>
+  );
+};
+
+export default HelloWorld;

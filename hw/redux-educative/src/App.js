@@ -8,8 +8,8 @@ class App extends Component {
     return [
       <HelloWorld key={1} tech={store.getState().tech} />,
       <ButtonGroup key={2} technologies={["React", "Elm", "React-redux"]} />
-    ]; 
+    ];
   }
-} 
-        
+}
+
 export default App;
