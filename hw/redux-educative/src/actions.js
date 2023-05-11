@@ -1,8 +1,7 @@
-export const SET_TECHNOLOGY = 'SET_TECHNOLOGY';
 
-export const setTechnology = (tech) => {
+export function withdrawal10000(id, amount) {
   return {
-    type: SET_TECHNOLOGY,
-    tech
-  } 
+    type: 'WITHDRAWAL_10,000',
+    payload: { id, amount }
+  };
 }
