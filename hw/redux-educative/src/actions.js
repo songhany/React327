@@ -1,7 +1,6 @@
-
-export function withdrawal10000(id, amount) {
+export function withdrawal(amount) {
   return {
-    type: 'WITHDRAWAL_10,000',
-    payload: { id, amount }
+    type: 'WITHDRAWAL',
+    payload: amount
   };
 }

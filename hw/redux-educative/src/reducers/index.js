@@ -1,8 +1,12 @@
-export default (state, action) => {
+const initialState = {
+  totalAmount: 2500701
+};
+
+export default function reducer(state = initialState, action) {
   switch (action.type) {
-    case "WITHDRAWAL_10,000":
-      return {...state, totalAmount: totalAmount - 10000 };
+    case "WITHDRAWAL":
+      return {...state, totalAmount: state.totalAmount - action.payload };
     default:
       return state;
   } 
-};
+}
