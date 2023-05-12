@@ -26,7 +26,7 @@ export default class BankApp extends Component {
         </div>
 
         <section className="App__buttons">
-          <button data-amount="10000" onClick={}>WITHDRAW $10,000</button>
+          <button data-amount="10000">WITHDRAW $10,000</button>
           <button data-amount="5000">WITHDRAW $5,000</button>
         </section>
 
