@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import BankApp from "./components/3bankApplication/BankApp";
 import { store } from "./store";
+import BankApp from "./components/BankApplication/BankApp";
 
 class App extends Component {
   render() {

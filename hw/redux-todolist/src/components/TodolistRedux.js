@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useSelector, useDispatch, Provider } from 'react-redux';
 // import store from '../store';
-import { addTodo, removeTodo, editTodo, toggleTodo } from './actions';
+import { addTodo, removeTodo, editTodo, toggleTodo } from '../actions';
 
 export default function TodolistRedux() {
   const dispatch = useDispatch();

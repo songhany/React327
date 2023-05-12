@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import formatNumber from "format-number";
-import store from "./store";
-import { withdrawMoney } from "./actions";
+import store from "../../store";
+import { withdrawMoney } from "../../actions";
 //import photographer from "./images/girl.png";
-import "./App.css";
+import "../../App.css";
 
-class App extends Component {
+class BankApp extends Component {
   render() {
     const { totalAmount, username } = store.getState();
 
@@ -19,8 +18,7 @@ class App extends Component {
         <img className="App__userpic" src={"https://image.ibb.co/nC8vGp/girl.png"} alt="photographer" />
         <p className="App__username">Hello, {username}! </p>
         <div className="App__amount">
-          {formatNumber({ prefix: "$" })(totalAmount)}
-          <p className="App__amount--info">Total Amount</p>
+          <p className="App__amount--info">Total Amount {(totalAmount)}</p>
         </div>
 
         <section className="App__buttons">
@@ -34,4 +32,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default BankApp;
