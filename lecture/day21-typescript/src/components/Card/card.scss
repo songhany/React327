@@ -1,0 +1,32 @@
+$card-primary-theme: red;
+$card-secondary-theme: yellow;
+
+@mixin border($color, $size) {
+  // background-color: $color;
+  border: $size solid $color;
+}
+
+.card {
+  &__header {
+    // border: 1px solid $card-primary-theme;
+    @include border(red, 10px)
+  }
+
+  &__title {
+
+  }
+
+  &__body {
+
+  }
+
+  &__button {
+    &--primary {
+ 
+    }
+
+    &--secondary {
+
+    }
+  }
+}

@@ -24,12 +24,8 @@ class App extends Component {
         </div>
 
         <section className="App__buttons">
-          <button data-amount="10000" onClick={handleWithdrawMoney}>
-            WITHDRAW $10,000
-          </button>
-          <button data-amount="5000" onClick={handleWithdrawMoney}>
-            WITHDRAW $5,000
-          </button>
+          <button data-amount="10000">WITHDRAW $10,000</button>
+          <button data-amount="5000">WITHDRAW $5,000</button>
         </section>
 
         <p className="App__giveaway">Give away all your cash to charity</p>
