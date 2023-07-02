@@ -48,11 +48,11 @@ export default function Day1() {
             .map((person) => {
               console.log(person);
 
-              return (
-                // we need unique "key" prop for performance
+              return (  // we need unique "key" prop for performance. Make application faster
                 <Fragment key={person.id}>
                   <div>{person.name}</div>
                   <div>{person.age}</div>
+                  <Person name={person.name} age={person.age} />
                 </Fragment>
               )
             })}
