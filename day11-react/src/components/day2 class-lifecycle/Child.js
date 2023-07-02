@@ -18,8 +18,9 @@ export default class Child extends Component {
   }
 
   // When we click 'add' button, sth. changed in Child, the Child rerenders
-  // When we click 'change theme', nothing happen to Child, but still Child rerenders. Nothing in the Child changed, but react still go into all Childs to run diffing algorithm to do the reconciliation, it's not necessary to rerendered Childs. 
-  // If Child is very big component, then reconciliation will take longer and our app is not very performant, we can optimize performance by using shouldComponentUpdate(nextProps,nextState) to prevent unnecessary rerender.
+  // When we click 'change theme', nothing happen to Child, but still Child rerenders.
+  //   Nothing in the Child changed, but react still go into all Childs to run diffing algorithm to do the reconciliation, it's not necessary to rerendered Childs. 
+  // If Child is very big component, then reconciliation will take longer and our app is not very performant, we can optimize performance by using shouldComponentUpdate(nextProps, nextState) to prevent unnecessary rerender.
   shouldComponentUpdate(nextProps, nextState) {  // prevent unnecessary rerender
     const propKeys = Object.keys(nextProps);
     for (let i=0; i < propKeys.length; i++) {
